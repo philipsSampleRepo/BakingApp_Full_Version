@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">MyBaking App</string>
+
+    <!--Exo Player Strings-->
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="restart">Restart</string>
+
+    <string name="cd_widget_background">App icon as background image of widget</string>
+    <string name="cd_widget_text">The name of the chosen recipe</string>
+    <string name="empty_text_widget">What would you like to cook today? Click here to choose a recipe</string>
+    <string name="backdrop">backdrop</string>
+    <string name="poster">poster</string>
+    <string name="recipe_title">Recipe Title</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="short_description">Short Description</string>
+    <string name="short_description_val">Short Description</string>
+    <string name="description">Description</string>
+    <string name="full_description_val">Full Description</string>
+    <string name="skip_to_previous">Previous</string>
+    <string name="rewind">rewind</string>
+    <string name="fast_forward">fast forward</string>
+    <string name="skip_to_next">Next</string>
+    <string name="full_description">Full Description</string>
+    <string name="guide_image">guide image</string>
+    <string name="no_more_results">No more results…</string>
+    <string name="recipe_image">Recipe Image</string>
+    <string name="item_title">Recipe Title</string>
+    <string name="servings">2</string>
+    <string name="of">of</string>
+    <string name="no_results">No results items to display. Please check the connection and try again.</string>
+    <string name="no_network">No Connection. Please try again…</string>
+    <!-- Strings used for fragments for navigation -->
+
+
+
+
+
+</resources>

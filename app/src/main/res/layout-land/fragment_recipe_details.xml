@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/recipe_poster"
+                    android:layout_width="260dp"
+                    android:layout_height="236dp"
+                    app:cardCornerRadius="5dp"
+                    app:layout_constraintStart_toStartOf="@+id/guideline3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/recipe_poster_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:contentDescription="@string/poster"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/recipe_icon" />
+                </androidx.cardview.widget.CardView>
+
+                <!--    <ImageView-->
+                <!--        android:id="@+id/movie_poster"-->
+                <!--        android:layout_width="140dp"-->
+                <!--        android:layout_height="236dp"-->
+                <!--        android:scaleType="fitXY"-->
+                <!--        app:layout_constraintStart_toStartOf="@+id/guideline3"-->
+                <!--        app:layout_constraintTop_toTopOf="parent"-->
+                <!--        app:srcCompat="@drawable/rose" />-->
+
+                <TextView
+                    android:id="@+id/recipe_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="5dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/special_font"
+                    android:foregroundGravity="center"
+                    android:paddingStart="2dp"
+                    android:text="@string/recipe_title"
+                    android:textColor="#A313BC"
+                    android:textSize="45sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/recipe_poster"
+                    app:layout_constraintTop_toTopOf="@+id/guideline2"
+                    tools:ignore="RtlSymmetry" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="21dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toStartOf="@+id/recipe_poster"
+                    app:layout_constraintGuide_begin="40dp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="recipe_title,recipe_poster"
+                    tools:layout_editor_absoluteY="236dp" />
+
+                <View
+                    android:id="@+id/view_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/barrier2" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="20dp" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toTopOf="@+id/playerView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="4dp" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="332dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="@string/ingredients"
+                    android:textColor="#A8A4A4"
+                    android:textSize="40sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view_divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view_divider"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <!--    <androidx.recyclerview.widget.RecyclerView-->
+                <!--        android:layout_width="0dp"-->
+                <!--        android:layout_height="351dp"-->
+                <!--        android:layout_marginBottom="4dp"-->
+                <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--        app:layout_constraintHorizontal_bias="0.0"-->
+                <!--        app:layout_constraintStart_toStartOf="@+id/guideline3" />-->
+
+
+                <LinearLayout
+                    android:id="@+id/ingredients_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline3"
+                    app:layout_constraintTop_toBottomOf="@+id/view_divider"
+                    app:layout_constraintVertical_bias="0.043"/>
+
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:id="@+id/playerView"
+                    android:layout_width="0dp"
+                    android:layout_height="400dp"
+                    android:layout_marginEnd="10dp"
+                    app:controller_layout_id="@layout/exo_playback_control_view"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                    app:layout_constraintStart_toStartOf="@+id/guideline3"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_short_description" />
+
+                <TextView
+                    android:id="@+id/txt_short_description"
+                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/short_description"
+                    android:textColor="#A8A4A4"
+                    android:textSize="40sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline3"
+                    app:layout_constraintTop_toBottomOf="@+id/playerView" />
+
+                <TextView
+                    android:id="@+id/txt_short_description_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/short_description_val"
+                    android:textSize="26sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline3"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_short_description" />
+
+                <TextView
+                    android:id="@+id/txt_full_description"
+                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/description"
+                    android:textColor="#A8A4A4"
+                    android:textSize="40sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline3"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_short_description_val" />
+
+                <TextView
+                    android:id="@+id/txt_full_description_val"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/full_description_val"
+                    android:textSize="26sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline3"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_full_description" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <include layout="@layout/guide_layout"/>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

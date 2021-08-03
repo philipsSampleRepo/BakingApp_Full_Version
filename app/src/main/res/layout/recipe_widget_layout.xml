@@ -1,0 +1,61 @@
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appwidget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWidget">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/recipe_icon"
+        android:alpha="0.6"
+        android:contentDescription="@string/cd_widget_background"/>
+
+    <TextView
+        android:id="@+id/appwidget_recipe_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:fontFamily="casual"
+        android:contentDescription="@string/cd_widget_text"
+        tools:text = "Brownies"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:padding="@dimen/half_padding"
+        android:paddingEnd="@dimen/padding_standard"
+        android:paddingStart="@dimen/half_padding"
+        app:drawableEndCompat="@drawable/widget_right_arrow" />
+
+    <ListView
+        android:id="@+id/appwidget_ingredient_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appwidget_recipe_name"
+        android:layout_margin="8dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:descendantFocusability="blocksDescendants"/>
+
+    <TextView
+        android:id="@+id/empty_tv_widget"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:fontFamily="casual"
+        android:textSize="24sp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="@dimen/half_padding"
+        android:text="@string/empty_text_widget" />
+
+</RelativeLayout>
+
